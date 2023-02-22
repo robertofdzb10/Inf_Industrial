@@ -1,14 +1,15 @@
+int leeValor(void);
 #include <stdio.h>
 
-int array1[100];
-int array2[100];
-int contador = 0;
-int contador1 = 0;
-int contador2 = 0;
-int valor;
-int* selecciona_array = &array1;
-
 void main() {
+
+	int array1[100];
+	int array2[100];
+	int contador = 0;
+	int contador1 = 0;
+	int contador2 = 0;
+	int valor;
+	int* selecciona_array = &array1;
 
 	while (contador < 100) {
 		valor = leeValor();
