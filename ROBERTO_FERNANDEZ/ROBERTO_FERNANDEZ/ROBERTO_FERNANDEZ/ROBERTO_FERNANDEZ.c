@@ -1,7 +1,7 @@
 int leeValor(void);
 #include <stdio.h>
 
-void main() {
+int main() {
 
 	int array1[100];
 	int array2[100];
@@ -33,6 +33,7 @@ void main() {
 		}
 
 		contador++;
+		return 0;
 	}
 
 	printf("Los elementos del array 1 son (%d):\n", contador1);
