@@ -1,6 +1,6 @@
 #include <stdio.h>
+#include "Profesor.h"
 #define MAX 30
-#include "Profesor.c"
 
 typedef struct {
     char nombre[MAX];

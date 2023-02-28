@@ -1,7 +1,6 @@
-#include <stdio.h>
-#define MAX 30 //Todo loque lleva # sin punto y coma al final
+#include "Profesor.h" //Se recomienda incluir el propio .h en el .c que lo define
 
-typedef struct {
-    char nombre[MAX];
-    char materia[MAX];   
-} Profesor;
+Profesor createProfesor(void) {
+    //Ejemplo de función cuyo código se definiría en el .c
+    return ;
+}
