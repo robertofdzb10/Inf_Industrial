@@ -4,7 +4,7 @@
 
 typedef struct {
     char nombre[MAX];
-    char grupo[MAX];
+    int grupo;
     int nota;
     Profesor profesor;
 } Estudiante;
