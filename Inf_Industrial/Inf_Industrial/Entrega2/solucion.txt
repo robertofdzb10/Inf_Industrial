@@ -1,7 +1,0 @@
-Ordenador donde se sitúa el programa MES: 172.21.0.90 
-Codigo del PLC(1): 01,  direccion IP: 172.21.1.101 
-Codigo del PLC(2): 02,  direccion IP: 172.21.2.101 
-Codigo del PLC(3): 03,  direccion IP: 172.21.3.101 
-Codigo del PLC(4): 06,  direccion IP: 172.21.6.101 
-Codigo del PLC(5): 07,  direccion IP: 172.21.7.101 
-Codigo del PLC(6): 10,  direccion IP: 172.21.10.101 
