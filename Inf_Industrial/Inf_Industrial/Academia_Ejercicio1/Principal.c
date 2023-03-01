@@ -72,7 +72,7 @@ int main()
 
     for (int i = 0; i < 10; i++)
     {
-        if (estudiantes[i].nota >= 50 && strcmp(estudiantes[i].profesor.nombre, "Juan Torres") == 0 && contador < 5) //strcmp cpmpara dos cadenas de carácteres y devuelve 0 si son iguales
+        if (estudiantes[i].nota >= 50 && strcmp(estudiantes[i].profesor.nombre, "Juan Torres") == 0 && contador < 5) // strcmp compara dos cadenas de carácteres y devuelve 0 si son iguales
         {
             cincoAprobados[contador] = estudiantes[i];
             // Imprimimos por pantalla los estudiantes elegidos
