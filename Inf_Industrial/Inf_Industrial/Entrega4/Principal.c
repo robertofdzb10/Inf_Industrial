@@ -25,21 +25,29 @@ int main()
     }
 
     int dim;
-    void *datos = cargaDatos(dim);
+    datos_t *datos = (datos_t *)cargaDatos(dim);
+    
+    if (datos == NULL)
+    {
+        printf("La lectura de los datos fallo");
+        return 1; // Entra en esta sentencia y acaba el main 
+    }
 
     // Imprimir los valores en el archivo de texto
-    fprintf(archivo, "v1: -%d\n");
-    fprintf(archivo, "v2: %u\n");
-    fprintf(archivo, "v3: -%d\n");
-    fprintf(archivo, "v4: -%d\n");
-    fprintf(archivo, "v5: %u\n");
-    fprintf(archivo, "v6: -%d\n");
-    fprintf(archivo, "v7: %u\n");
-    fprintf(archivo, "v8: %u\n");
-    fprintf(archivo, "v9: -%d\n");
+    fprintf(archivo, "v1: -%d\n", datos->v1);
+    fprintf(archivo, "v2: %u\n", datos->v2);
+    fprintf(archivo, "v3: -%d\n", datos->v3);
+    fprintf(archivo, "v4: -%d\n", datos->v4);
+    fprintf(archivo, "v5: %u\n", datos->v5);
+    fprintf(archivo, "v6: -%d\n", datos->v6);
+    fprintf(archivo, "v7: %u\n", datos->v7);
+    fprintf(archivo, "v8: %u\n", datos->v8);
+    fprintf(archivo, "v9: -%d\n", datos->v9);
     fprintf(archivo, "....\n");
 
     fclose(archivo); // Cerramos el archivo
+    
+    free(datos);
     
     
     return 0;
