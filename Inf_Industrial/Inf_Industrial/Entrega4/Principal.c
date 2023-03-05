@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void *cargaDatos(int *dim); // Null cuando no puede obterner el conjunto de datos (dim = 0), Algo !Null si obtiene el conjunto de datos (dim = 16)
 
