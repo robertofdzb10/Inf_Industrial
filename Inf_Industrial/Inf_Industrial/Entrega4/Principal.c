@@ -7,6 +7,9 @@ void *cargaDatos(int *dim); // Null cuando no puede obterner el conjunto de dato
 
 int main()
 {
+    long v3, v6;
+    unsigned long v5;
+
     FILE *archivo; // Puntero al archivo
     archivo = fopen("registro.txt", "a"); // El modo de apertura "w" indica que el archivo se abrirá para escritura, el modo "a" significa que se agregará contenido sin sobrescribir. Si el archivo no existe, se creará.
     if (archivo == NULL)
@@ -26,16 +29,32 @@ int main()
         return 1;
     }
 
+<<<<<<< HEAD
     Datos_t* p_datos = (Datos_t*)datos; // Convertir "datos" (puntero que devuelve cargaDatos()) en un puntero de "Datos_t", lo casteamos ya que el formato que devuelve la función es el de "sDatos_t"
 >>>>>>> db3f8de (Update)
+=======
+    Datos_t* p_datos = (Datos_t*)datos; // Convertir "datos" (puntero que devuelve cargaDatos()) en un puntero de "Datos_t", lo casteamos ya que el formato que devuelve la función es el de "Datos_t"
+
+    v3 = p_datos->v3_2; // Cargamos los 4 primeros bits
+    v3 = (v3 << 12); // Desplazamos a la izquierda 12 posiciones, introduciendo 0s
+    v3 = (v3 | p_datos->v3_1); // Hacemos un or con v3_1, de manera que los 0 que hemos introducido cambien a uno, para representar a v3_1
+
+    v5 = p_datos->v5_2;
+    v5 = (v5 << 26);
+    v5 = (v5 | p_datos->v5_1);
+
+    v6 = p_datos->v6_2;
+    v6 = (v6 << 26); //Aqui problema, con el 1 primero creo
+    v6 = (v6 | p_datos->v6_1);
+>>>>>>> 6c59160 (Update)
 
     // Imprimir los valores en el archivo de texto
     fprintf(archivo, "v1: %d\n", p_datos->v1);
     fprintf(archivo, "v2: %u\n", p_datos->v2); // %u especifican un entero sin signo
-    fprintf(archivo, "v3: %d\n", p_datos->v3);
+    fprintf(archivo, "v3: %ld\n", v3);
     fprintf(archivo, "v4: %d\n", p_datos->v4);
-    fprintf(archivo, "v5: %u\n", p_datos->v5);
-    fprintf(archivo, "v6: %d\n", p_datos->v6);
+    fprintf(archivo, "v5: %lu\n", v5);
+    fprintf(archivo, "v6: %ld\n", v6);
     fprintf(archivo, "v7: %u\n", p_datos->v7);
     fprintf(archivo, "v8: %u\n", p_datos->v8);
     fprintf(archivo, "v9: %d\n", p_datos->v9);
