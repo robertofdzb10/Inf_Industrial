@@ -2,6 +2,7 @@
     "files.associations": {
         "stdio.h": "c",
         "dispositivos.h": "c",
-        "dispositivo.h": "c"
+        "dispositivo.h": "c",
+        "stdlib.h": "c"
     }
 }
