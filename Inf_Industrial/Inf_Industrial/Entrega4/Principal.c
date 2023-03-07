@@ -25,7 +25,7 @@ int main()
     }
 
     int dim;
-    void *datos = cargaDatos(dim);
+    void *datos = cargaDatos(&dim); // El puntero almacena una dirección, por lo que al meterle un puntero, le estamos introduciendo una dirección, la que esta apuntado, de ahí que introduzcamos &dim.
 
     // Imprimir los valores en el archivo de texto
     fprintf(archivo, "v1: -%d\n");
