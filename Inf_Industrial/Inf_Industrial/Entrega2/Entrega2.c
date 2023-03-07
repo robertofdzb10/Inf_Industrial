@@ -32,13 +32,18 @@ void *LeeConfig(char *fichero) // *void, puntero genérico, es decir que la func
     int numDispositivos;
     int boolnumDispositivos = 0;
     int contador = 0;
-    Equipo *equipo = malloc(sizeof(Equipo));                             // Crea un puntero a un equipo, con la ventaja de que podemos usar memoría dinámica
-    equipo->dispositivo = malloc(numDispositivos * sizeof(Dispositivo)); // La función malloc se utiliza para asignar memoria dinámicamente en tiempo de ejecución. Se introduce el espaco que deseamos ocupar, en este caso, lo que ocupa un dispositivo por el número de dispositivos.
+
+    Equipo *equipo = (Equipo*)malloc(sizeof(Equipo)); // Crea un puntero a un equipo, con la ventaja de que podemos usar memoría dinámica
+    equipo->dispositivo = (Dispositivo*)malloc(numDispositivos * sizeof(Dispositivo)); // La función malloc se utiliza para asignar memoria dinámicamente en tiempo de ejecución. Se introduce el espaco que deseamos ocupar, en este caso, lo que ocupa un dispositivo por el número de dispositivos.
+    if (equipo == NULL || equipo->dispositivo == NULL){
+        printf("Error reservando memoria.");
+        return NULL;
+    }
 
     archivo = fopen(fichero, "r"); // Esta función devuele un puntero al fichero indicado. El segundo parámetro módo de apertura, r es para lectura
     if (archivo == NULL)
     {
-        printf("La apertura del archivo fallo");
+        printf("La apertura del archivo fallo.");
         return NULL; // Solo puedo devolver punteros o NULL
     }
 
