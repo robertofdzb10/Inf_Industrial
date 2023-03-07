@@ -19,32 +19,16 @@ int main()
     }
 
     int dim;
-<<<<<<< HEAD
-<<<<<<< HEAD
     void *datos = cargaDatos(&dim); // El puntero almacena una dirección, por lo que al meterle un puntero, le estamos introduciendo una dirección, la que esta apuntado, de ahí que introduzcamos &dim.
-<<<<<<< HEAD:Inf_Industrial/Inf_Industrial/Entrega4/Principal.c
-=======
-    void *datos = cargaDatos(&dim); // // El puntero almacena una dirección, por lo que al meterle un puntero, le estamos introduciendo una dirección, la que esta apuntado, de ahí que introduzcamos &dim.
-=======
->>>>>>> 1aa0dfa (Update):Inf_Industrial/Inf_Industrial/Entrega4/pr.c
     if (datos == NULL || dim == 0){
         printf("Error al cargar los datos.\n");
         fclose(archivo);
         return 1;
     }
 
-<<<<<<< HEAD:Inf_Industrial/Inf_Industrial/Entrega4/Principal.c
-<<<<<<< HEAD
-    Datos_t* p_datos = (Datos_t*)datos; // Convertir "datos" (puntero que devuelve cargaDatos()) en un puntero de "Datos_t", lo casteamos ya que el formato que devuelve la función es el de "sDatos_t"
->>>>>>> db3f8de (Update)
-=======
-    Datos_t* p_datos = (Datos_t*)datos; // Convertir "datos" (puntero que devuelve cargaDatos()) en un puntero de "Datos_t", lo casteamos ya que el formato que devuelve la función es el de "Datos_t"
-
-=======
     Datos_t* p_datos = (Datos_t*)datos; // Convertir "datos" (puntero que devuelve cargaDatos()) en un puntero de "Datos_t", lo casteamos ya que el formato que devuelve la función es el de "Datos_t"
 
     // Recombinar variables con conflictos
->>>>>>> 1aa0dfa (Update):Inf_Industrial/Inf_Industrial/Entrega4/pr.c
     v3 = p_datos->v3_2; // Cargamos los 4 primeros bits
     v3 = (v3 << 12); // Desplazamos a la izquierda 12 posiciones, introduciendo 0s
     v3 = (v3 | p_datos->v3_1); // Hacemos un or con v3_1, de manera que los 0 que hemos introducido cambien a uno, para representar a v3_1
@@ -56,14 +40,7 @@ int main()
     v6 = p_datos->v6_2;
     v6 = (v6 << 26); //Aqui problema, con el 1 primero creo
     v6 = (v6 | p_datos->v6_1);
-<<<<<<< HEAD:Inf_Industrial/Inf_Industrial/Entrega4/Principal.c
->>>>>>> 6c59160 (Update)
-=======
-    void *datos = cargaDatos(&dim); // El puntero almacena una dirección, por lo que al meterle un puntero, le estamos introduciendo una dirección, la que esta apuntado, de ahí que introduzcamos &dim.
->>>>>>> 34c8b0c (Revert "Update Principal.c")
-=======
 
->>>>>>> 1aa0dfa (Update):Inf_Industrial/Inf_Industrial/Entrega4/pr.c
 
     // Imprimir los valores en el archivo de texto
     fprintf(archivo, "v1: %d\n", p_datos->v1);
