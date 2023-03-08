@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define TAMANO 64
+#define TAMANO 8
 
 unsigned char rotarIZD(unsigned char valor, int nPosiciones);
 unsigned char rotarDCHA(unsigned char valor, int nPosiciones);
