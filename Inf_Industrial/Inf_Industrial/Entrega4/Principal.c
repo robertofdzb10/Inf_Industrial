@@ -38,7 +38,7 @@ int main()
     v5 = (v5 | p_datos->v5_1);
 
     v6 = p_datos->v6_2;
-    v6 = (v6 << 26); //Aqui problema, con el 1 primero creo
+    v6 = (v6 << 26); // TODO
     v6 = (v6 | p_datos->v6_1);
 
 
