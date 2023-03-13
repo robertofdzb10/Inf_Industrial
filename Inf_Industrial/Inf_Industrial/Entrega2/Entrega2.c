@@ -3,7 +3,10 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
+
+#define _CTR_SECURE_NO_WARNINGS //Sentencia para que no den Warnings, en este caso las funciones de sscanf
 #define MAX 15
+
 
 void *LeeConfig(char *fichero); // Las clases que se usan en el main hay que declararlas antes de usarlas, sino el main no las reconoce
 
