@@ -11,7 +11,7 @@ char recogeDatos(double *tiempo, int *valores, int *n);
 
 // tiempo, intervalo de timepo que ha tardado el fabricantee en el lote actual
 // valores, array de enteros (tamaño max. 20) relacionados con las caracterísitcas de la pieza
-// n, núemro de posciones del anterior array
+// n, núemro de posciones del anterior array // Prueba
 
 int main()
 {
