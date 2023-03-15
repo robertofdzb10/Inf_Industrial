@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Datos.h"
-#include <stdbool.h> // ¿?
 
 char recogeDatos(double *tiempo, int *valores, int *n);
 
@@ -14,7 +13,7 @@ int main()
 
     Datos *datos = NULL;
 
-    while (true){ //Lo recorre continuamente (¿? Porque lo otro estaba mal)
+    while (1){ //Lo recorre continuamente (¿? Porque lo otro estaba mal)
 
         char devolucion = recogeDatos(&tiempo, valores, &n);
         if (devolucion == -2){
@@ -55,7 +54,7 @@ int main()
     for (int i = 0; i < contador; i++){
         fprintf(archivo, "%03d: %8.3f segundos\n", (i + 1), datos[i].tiempo_d); // 03 rellena con tres 0s, 8.3 imprime 8 carácteres en total 3 de los cuales en la parte decimal
         for (int e = 0; e < datos[i].n_d; e++){
-            fprintf(archivo, "0x%X ", datos[i].valores_d[e]); // Valores en hexadecimal válidos
+            fprintf(archivo, "%X ", datos[i].valores_d[e]); // Valores en hexadecimal válidos
         }
         if (datos[i].n_d > 0){ // Comprobamos si n = 0, de manera que si es iguala 0 no hay ningun valor para imprimir
             imprimirDecimal = (datos[i].valores_d[0]>>4) & 0x7; // 0111
@@ -64,9 +63,9 @@ int main()
             // Sino existe el primer valor, no existe el segundo
             if (datos[i].n_d > 1){ 
             imprimirDecimal = (datos[i].valores_d[1]>>8) & 0x0000FFFF;
-            fprintf(archivo, "\n%d\t", imprimirDecimal);
+            fprintf(archivo, "%d\n\n", imprimirDecimal);
             } else {
-                fprintf(archivo, "n\n");
+                fprintf(archivo, "\n\n");
             }
 
         } else {
