@@ -13,7 +13,7 @@ int main()
 
     Datos *datos = NULL;
 
-    while (1){ //Lo recorre continuamente (¿? Porque lo otro estaba mal)
+    while (1){ //Lo recorre continuamente
 
         char devolucion = recogeDatos(&tiempo, valores, &n);
         if (devolucion == -2){
