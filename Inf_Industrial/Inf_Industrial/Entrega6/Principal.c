@@ -1,14 +1,15 @@
-#define _CRT_SECURE_NO_WARNINGS
+//#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+#include <unistd.h> // Para usar el sleep() en mac 
 
-int leeCelulaFotoelectrica(void);
-int leeCodigoBarras(void* datos);
+//int leeCelulaFotoelectrica(void);
+//int leeCodigoBarras(void* datos);
 
 int main()
 {
     while(1){ // Búcle principal
         printf("Hola");
-        sleep(0.5);
+        sleep(5);
     }
 
     //Preparación del archivo 
@@ -21,6 +22,9 @@ int main()
 
     //Escritura de datos en el archivo
 
+
+    // Librerar memoria y cerrar archivos
+    fclose(archivo);
 
     return 0;
 }
