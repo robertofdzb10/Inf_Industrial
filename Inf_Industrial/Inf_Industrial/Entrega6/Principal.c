@@ -7,9 +7,10 @@
 
 int main()
 {
+    
     while(1){ // Búcle principal
-        printf("Hola");
-        sleep(5);
+        printf("Hola\n");
+        usleep(500 * 1000); // En vs sería sleep() y dentro de la función pondríamos ms. En mac usamos usleep() que esta en microsegundos por eso múltiplicamos 1000
     }
 
     //Preparación del archivo 
