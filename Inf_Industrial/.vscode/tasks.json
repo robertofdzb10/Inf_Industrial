@@ -8,8 +8,8 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
-                "-Llib",
-                "-lmanipula",
+                // "-Llib",
+                // "-lmanipula",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
